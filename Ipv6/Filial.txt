@@ -1,0 +1,16 @@
+ena
+conf t
+ipv6 unicast-routing
+int g0/0
+ipv6 address c:c:c:c:c:c:c:1/112
+no shut
+ipv6 rip fiap enable
+int s0/3/1
+ipv6 address b:b:b:b:b:b:b:2/112
+no shut
+ipv6 rip fiap enable
+int s0/3/0
+ipv6 address d:d:d:d:d:d:d:1/112
+clock rate 64000
+no shut
+ipv6 rip fiap enable
